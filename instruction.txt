@@ -1,0 +1,32 @@
+Tutorial how to host your Vite project on github.io
+
+1. Create vite project
+2. Install all dependencies (npm install)
+3. Install gh-pages (npm install --save-dev gh-pages)
+4. Update packeges.json:
+    4.1 @line2 = "homepage": "https://yourUserName.github.io/yourGitDir/",
+    4.2 @line8/9 (in Scripts backets) =
+            "predeploy": "npm run build",
+            "deploy": "gh-pages -d dist",
+5. Update vite.config.ts:
+    5.1 in function defineConfig= 
+        base:"/yourReactApp/",
+
+6. Push all updated files on github using provided command from gh
+7. Run "npm run deploy"
+8. Check action part of your dir on gh, you project should already appear there
+
+If nont shown>>
+9. Go to settings of the project on gh
+10. At left shelf, click on pages
+11. Source: Deploy from a branch
+12. Branch: gh-pages
+13. Your setup should work perfectly..
+
+P/S: If project still not worked, check provided link below:
+    https://www.youtube.com/watch?v=tg-Xgx-lqXM
+
+    credit to respected owner..
+
+
+
